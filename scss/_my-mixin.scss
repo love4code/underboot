@@ -1,0 +1,168 @@
+@mixin content {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin: 2em 0 1em 0;
+	}
+	
+	h1 {
+		
+	}
+	h2 {
+		
+	}
+	h2 + h3 {
+		margin-top: 0;
+	}
+	h3 {
+		
+	}
+	h3 + h4 {
+		margin-top: 0;
+	}
+	h4 {
+		
+	}
+	h5 {
+		
+	}
+	h6 {
+		
+	}
+	
+	p {
+		margin-bottom: 2em;
+		line-height: 1.7;
+	}
+	.more-link {
+		background: $brand-primary;
+		color: white;
+		padding: 10px;
+	}
+	blockquote {
+		p {
+			
+		}
+		cite {
+			font-size: 12px;
+			font-size: 1.2rem;
+		}
+	}
+	
+	table {
+		@extend .table;
+		@extend .table-bordered;
+	}
+	
+	dl {
+		dt {
+			
+		}
+		dd {
+			padding-left: 2em;
+			margin-bottom: 1em;
+		}
+	}
+	
+	ul {
+		li {
+			
+		}
+	}
+	
+	ol {
+		li {
+			
+		}
+	}
+	
+	address {
+		
+	}
+	anchor {
+		
+	}
+	abbr {
+		
+	}
+	cite {
+		
+	}
+	code {
+		
+	}
+	strike {
+		
+	}
+	em {
+		
+	}
+	ins {
+		
+	}
+	kbd {
+		
+	}
+	pre {
+		
+	}
+	q {
+		
+	}
+	strong {
+		
+	}
+	sub {
+		
+	}
+	sup {
+		
+	}
+	tt {
+		
+	}
+	var {
+		
+	}
+	
+	img,
+	figure {
+		@extend .img-responsive;
+	}
+	img {
+	}
+	.aligncenter {
+		margin: 0 auto;
+	}
+	.alignleft {
+		float: left;
+		margin-right: 10px;
+		margin-bottom: 10px;
+	}
+	.alignright {
+		float: right;
+		margin-left: 10px;
+		margin-bottom: 10px;
+	}
+	.wp-caption {
+		margin-bottom: 2em;
+	}
+	.wp-caption-text {
+		font-size: 12px;
+		font-size: 1.2rem;
+		margin-top: 5px;
+	}
+	
+	.page-links {
+		background: $gray-lighter;
+		padding: 10px;
+		text-align: center;
+		line-height: 1;
+		a {
+			margin: 0 10px;
+		}
+	}
+}

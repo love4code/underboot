@@ -1,0 +1,547 @@
+/*======================================================================
+// screen reader setting
+//====================================================================*/
+.screen-reader-text {
+	@extend .sr-only;
+}
+
+/*======================================================================
+// common
+//====================================================================*/
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 15px;
+	font-size: 1.5rem;
+}
+
+
+/*======================================================================
+// #masthead .site-header
+//====================================================================*/
+.site-header {
+	padding-left: 0;
+	padding-right: 0;
+	@media (min-width: $screen-sm-min) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+.site-branding {
+	padding: 50px 0 0;
+	text-align: center;
+	img {
+		@extend .img-responsive;
+	}
+}
+.site-title {
+	font-size: 42px;
+	font-size: 4.2rem;
+	font-weight: normal;
+	margin: 0 0 15px 0;
+}
+.site-description {
+	margin: 0 0 50px;
+}
+
+.navbar-brand {
+	@media (min-width: $screen-sm-min) {
+    display: none;
+  }
+}
+
+/*======================================================================
+// .breadcrumb : When Breadcrumb NavXT is actived.
+//               Must check on Bootstrap variables.
+//====================================================================*/
+.breadcrumb {
+	font-size: 12px;
+	font-size: 1.2rem;
+	@media (min-width: $screen-sm-min) {
+    font-size: 1.4em;
+    font-size: 1.4rem;
+  }
+	.home {
+		
+	}
+	.taxonomy,
+	.category {
+		
+	}
+}
+
+
+/*======================================================================
+// #primary .content-area
+//====================================================================*/
+.content-area {
+	padding-left: 0;
+	padding-right: 0;
+	@media (min-width: $screen-sm-min) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.site-main {
+	
+}
+
+
+/*
+	
+エントリーの種類やカテゴリー、先頭固定記事、タグ、フォーマット、公開状態など様々な状態別にpost_class()にてエントリーごとにクラスを出力しています。
+必要に応じてクラスを指定してCSSコーディングをしましょう
+参照 => http://wpdocs.osdn.jp/%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%BF%E3%82%B0/post_class
+
+*/
+
+.post {
+	margin-bottom: 4em;
+}
+
+.sticky {
+	background: #f4f4f4;
+	padding: 10px;
+}
+
+
+/*--------------------------------------------------------------
+.single-format-****
+--------------------------------------------------------------*/
+.single-format-standard {
+	
+}
+.single-format-gallery {
+	.gallery-caption {
+		font-size: 14px;
+		font-size: 1.4rem;
+	}
+}
+.single-format-image {
+	
+}
+.single-format-audio {
+	
+}
+.single-format-video {
+	
+}
+
+
+
+/*--------------------------------------------------------------
+.entry-header
+--------------------------------------------------------------*/
+.entry-header {
+	
+}
+.entry-title {
+	font-size: 26px;
+	font-size: 2.6rem;
+	line-height: 1.2;
+	margin: 0 0 .5em 0;
+}
+.entry-meta {
+	font-size: 12px;
+	font-size: 1.2rem;
+	margin: 0 0 1em 0;
+	@media (min-width: $screen-sm-min) {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+	.posted-on {
+		margin-right: 5px;
+	}
+	.byline {
+		
+	}
+}
+
+/*--------------------------------------------------------------
+.entry-content
+--------------------------------------------------------------*/
+.entry-content {
+	@include content;
+}
+
+/*--------------------------------------------------------------
+.entry-footer
+--------------------------------------------------------------*/
+.entry-footer {
+	font-size: 12px;
+	font-size: 1.2rem;
+	margin: 2em 0 0 0;
+	@media (min-width: $screen-sm-min) {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+	.cat-links {
+		margin-right: 15px;
+	}	
+	.tags-links {
+		margin-right: 15px;
+	}
+	.comments-link {
+		margin-right: 15px;
+	}
+	.edit-link {
+		display: inline-block;
+		background: $brand-primary;
+		padding: 5px;
+		line-height: 1;
+		@include border-radius(5px);
+		a {
+			color: white;
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+.wp-pagenavi : When WP Pagenavi is activated and don't use pagenavi-css.css
+--------------------------------------------------------------*/
+.wp-pagenavi {
+	margin: 4em 0;
+	text-align: center;
+	.pages {
+		border: 1px solid $gray-lighter;
+		padding: 5px 10px;
+		margin: 0 5px;
+		color: $gray-light;
+	}
+	.current {
+		border: 1px solid $gray-lighter;
+		padding: 5px 10px;
+		margin: 0 5px;
+		background: $gray-light;
+		color: white;
+	}
+	.page {
+		border: 1px solid $gray-lighter;
+		padding: 5px 10px;
+		margin: 0 5px;
+		color: $gray-light;
+	}
+	.previouspostslink {
+		margin: 0 5px;
+		color: $gray-light;
+	}
+	.nextpostslink {
+		margin: 0 5px;
+		color: $gray-light;
+	}
+}
+
+
+/*--------------------------------------------------------------
+.navigation .post-navigation .posts-navigation
+--------------------------------------------------------------*/
+.post-navigation,
+.posts-navigation { // 別々に設定したい場合は複製して修正してください
+	margin: 4em 0;
+	.nav-links {
+		@media (min-width: $screen-sm-min) {
+	    @include pie-clearfix;
+	  }
+		.nav-previous {
+			background: $gray-lighter;
+			padding: 10px;
+			margin-bottom: 10px;
+			@media (min-width: $screen-sm-min) {
+				width: 49%;
+				margin-bottom: 0;
+				float: left;
+		  }
+		}
+		.nav-next {
+			background: $gray-lighter;
+			padding: 10px;
+			@media (min-width: $screen-sm-min) {
+		    width: 49%;
+		    float: right;
+		  }
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+#comments .comments-area
+--------------------------------------------------------------*/
+.comments-area {
+	
+}
+.comments-title {
+	background: $gray-lighter;
+	color: $gray-light;
+	padding: 10px;
+	font-size: 24px;
+	font-size: 2.4rem;
+}
+.comment-list {
+	list-style: none;
+	padding-left: 0;
+}
+.comment {
+	margin-bottom: 2em;
+	padding-bottom: 2em;
+	border-bottom: 1px solid $gray-lighter;
+}
+.comment-body {
+	.comment-meta {
+		.comment-author {
+			margin-bottom: 10px;
+			.fn {
+				
+			}
+			.says {
+				
+			}
+		}
+		.comment-metadata {
+			font-size: 12px;
+			font-size: 1.2rem;
+			.edit-link {
+				display: inline-block;
+				background: $brand-primary;
+				padding: 5px;
+				line-height: 1;
+				@include border-radius(5px);
+				a {
+					color: white;
+				}
+			}
+		}
+	}
+	.comment-content {
+		@include content;
+	}
+	.reply {
+		text-align: right;
+		.comment-reply-link {
+			background: $gray-light;
+			padding: 5px;
+			line-height: 1;
+			color: white;
+			@include border-radius(5px);
+		}
+	}
+}
+.bypostauthor {
+	background: #f4f4f4;
+	padding: 10px;
+}
+
+.comment-respond {
+	.comment-reply-title {
+		font-size: 24px;
+		font-size: 2.4rem;
+		padding: 10px;
+		margin-bottom: 1em;
+		border: 1px solid $gray-lighter;
+		color: $gray-light;
+	}
+	.comment-form {
+		.required {
+			color: $brand-danger;
+		}
+		.comment-notes {
+			font-size: 12px;
+			font-size: 1.2rem;
+		}
+		.comment-form-author,
+		.comment-form-email,
+		.comment-form-url,
+		.comment-form-comment {
+			@extend .form-group;
+			color: $gray-light;
+		}
+		.form-allowed-tags {
+			font-size: 12px;
+			font-size: 1.2rem;
+		}
+		input,
+		select,
+		textarea {
+			@extend .form-control;
+		}
+		.submit {
+			border: none;
+			background: $brand-success;
+			color: white;
+		}
+	}
+}
+
+/*======================================================================
+// #secondary .widget-area
+//====================================================================*/
+.widget-area {
+	
+}
+.widget {
+	margin: 0 0 3em;
+	.widget-title {
+		font-size: 20px;
+		font-size: 2.0rem;
+		margin: 0 0 .5em 0;
+	}
+	ul {
+		padding-left: 20px;
+		li {
+			ul {
+				margin-bottom: 1.5em;
+			}
+		}
+	}
+	select {
+		@extend .form-control;
+	}
+}
+
+// デフォルトで用意されているウィジェットに個別でCSS設定をする場合は以下を利用ください
+.widget_archive { // アーカイブウィジェット
+	
+}
+
+.widget_calendar { // カレンダーウィジェット
+	table {
+		width: 100%;
+		caption {
+			border: 1px solid #f4f4f4;
+			background: white;
+			padding: 10px 0;
+			font-size: 1.4rem;
+			font-size: 14px;
+			text-align: center;
+			color: $gray-light;
+			margin-bottom: 5px;
+		}
+		thead {
+			tr {
+				
+			}
+			th {
+				text-align: center;
+				padding: .5em 0;
+				background: #fafafa;
+				border-bottom: 1px solid $gray-lighter;
+			}
+		}
+		tbody {
+			tr {
+				
+			}
+			td {
+				text-align: center;
+				line-height: 1;
+				padding: .5em 0;
+				a {
+					color: $gray-light;
+					text-decoration: underline;
+				}
+			}
+		}
+		tfoot {
+			td {
+				background: #fafafa;
+				text-align: center;
+				padding: .5em 0;
+				border-top: 1px solid $gray-lighter;
+				a {
+					color: $gray-light;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+.widget_search {
+	.search-form {
+		label {
+			.search-field {
+				@extend .form-control;
+			}
+		}
+		.search-submit {
+			border: none;
+			background: $gray;
+			color: white;
+			padding: 6px 10px;
+			@include border-radius(5px);
+		}
+	}
+}
+
+
+.widget_categories { // カテゴリーウィジェット
+	
+}
+
+.widget_pages { // 固定ページウィジェット
+	
+}
+
+.widget_meta { // メタ情報ウィジェット
+	
+}
+
+.widget_recent_comments { // 最近のコメントウィジェット
+	
+}
+
+.widget_recent_entries { // 最近の投稿ウィジェット
+	
+}
+
+.widget_rss { // RSSウィジェット
+
+}
+
+.widget_search { // 検索ウィジェット
+	
+}
+
+.widget_text { // テキストウィジェット
+	img {
+		@extend .img-responsive;
+	}
+}
+
+.widget_tag_cloud { // タグウィジェット
+	
+}
+
+.widget_nav_menu { // カスタムメニューウィジェット
+	
+}
+
+/*======================================================================
+// #colophon .site-footer
+//====================================================================*/
+.site-footer {
+	background: $gray-lighter;
+}
+.site-footer-inner {
+	
+}
+.site-footer-widgets { // フッターウィジェット独自のCSSが必要な場合に記載
+	padding-top: 50px;
+	padding-bottom: 50px;
+	.widget {
+		
+	}
+}
+.site-info {
+	background: $gray-light;
+	color: white;
+	font-size: 12px;
+	text-align: center;
+	padding: 5px;
+	a {
+		color: white;
+		text-decoration: underline;
+	}
+}

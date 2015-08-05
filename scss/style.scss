@@ -1,0 +1,44 @@
+/*
+Theme Name: underboot
+Author: Olein Design
+Author URI: http://olein-design.com
+Description: underboot is the simple WordPress theme for developper.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+@charset "UTF-8";
+@import "compass";
+
+//* ================================================== *
+//*    Web Fonts import
+//* ================================================== */
+// ex) @import url(//fonts.googleapis.com/css?family=Niconne|Roboto:400,300,500,700|Oswald:400,300,700);
+
+
+//* ================================================== *
+//*    Bootstrap Base
+//* ================================================== */
+// Override Bootstrap variables
+@import "bootstrap-variables";
+// Core variables and mixins and compornents
+@import "bootstrap";
+
+
+//* ------------------------------------------------- *
+//*        Original Settings
+//* ------------------------------------------------- */
+@import "my-mixin";
+@import "my-variables";
+
+
+//* ------------------------------------------------- *
+//*    underscores CSS import
+//* ------------------------------------------------- */
+//@import "underscores";
+
+//* ------------------------------------------------- *
+//*    underboot CSS import
+//* ------------------------------------------------- */
+@import "underboot";
