@@ -166,3 +166,11 @@ require get_template_directory() . '/inc/jetpack.php';
  * Load navwalker
  */
 require_once get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
+
+/**
+ * editor style setting
+ */
+function underboot_add_editor_styles() {
+    add_editor_style( 'custom-editor-style.css' );
+}
+add_action( 'after_setup_theme', 'underboot_add_editor_styles' );
