@@ -12,11 +12,13 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
+		<?php if ( is_active_widget( 'footer-widget' ) ): ?>
 		<div class="site-footer-inner container">
 			<div class="site-footer-widgets row">
 				<?php dynamic_sidebar( 'footer-widget' ); ?>
 			</div><!-- /.site-footer-widgets -->
 		</div><!-- /.site-footer-inner -->
+		<?php endif; ?>
 		<div class="site-info">
 			Copyright © <?php echo bloginfo( 'name' ); ?> All Rights Reserved.
 			<span class="sep"> | </span>

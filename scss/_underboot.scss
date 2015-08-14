@@ -22,6 +22,7 @@ body {
 // #masthead .site-header
 //====================================================================*/
 .site-header {
+	position: relative;
 	padding-left: 0;
 	padding-right: 0;
 	@media (min-width: $screen-sm-min) {
@@ -30,20 +31,36 @@ body {
   }
 }
 .site-branding {
-	padding: 50px 0 0;
 	text-align: center;
 	img {
 		@extend .img-responsive;
 	}
 }
+.site-title-desc {
+	position: absolute;
+	top: 20px;
+	left: 0;
+	width: 100%;
+	@media (min-width: $screen-sm-min) {
+    top: 59px;
+  }
+  @media (min-width: $screen-md-min) {
+    top: 114px;
+  }
+}
 .site-title {
-	font-size: 42px;
-	font-size: 4.2rem;
+	font-size: 30px;
+	font-size: 3.0rem;
 	font-weight: normal;
-	margin: 0 0 15px 0;
+	margin: 0 0 10px 0;
+	@media (min-width: $screen-sm-min) {
+    font-size: 42px;
+    font-size: 4.2rem;
+  }
 }
 .site-description {
-	margin: 0 0 50px;
+	line-height: 1;
+	margin: 0;
 }
 
 .navbar-brand {
@@ -80,7 +97,7 @@ body {
 	padding-left: 0;
 	padding-right: 0;
 	@media (min-width: $screen-sm-min) {
-    padding-left: 15px;
+    padding-left: 0px;
     padding-right: 15px;
   }
 }
@@ -378,7 +395,9 @@ body {
 // #secondary .widget-area
 //====================================================================*/
 .widget-area {
-	
+	@media (min-width: $screen-sm-min) {
+    padding-right: 0;
+  }
 }
 .widget {
 	margin: 0 0 3em;
